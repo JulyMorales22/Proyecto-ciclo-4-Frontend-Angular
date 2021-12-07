@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-persona',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear-persona.component.css']
 })
 export class CrearPersonaComponent implements OnInit {
-
-  constructor() { }
+  //public formCrear = new FormGroup ({});
+  //constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    //this.formCrear = this.formBuilder.group({
+     // nombre:['',[Validators.required, Validators.nombre]]
+    //});
+
   }
 
 }

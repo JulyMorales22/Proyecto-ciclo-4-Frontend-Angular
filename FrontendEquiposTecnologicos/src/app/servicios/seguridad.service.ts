@@ -25,19 +25,25 @@ export class SeguridadService {
     })
   }
 
+  RefrescarDatosSesion(datos:ModeloIdentificar){
+    this.datosUsuarioEnSesion.next(datos);
+  }
+
   VerificarSesionActual(){
     let datos = this.ObtenerInformacionSesion();
     if(datos){
-      this.datosUsuarioEnSesion.next(datos);
+      this.RefrescarDatosSesion(datos);
     }
   }
   ObtenerDatosUsuarioEnSesion(){
-    return 
+    return this.datosUsuarioEnSesion.asObservable();
   }
-
+  
   AlmacenarSesion(datos:ModeloIdentificar){
+    datos.estaIdentificado = true;
     let datosString=JSON.stringify(datos);
     localStorage.setItem("datosSesion",datosString);
+    this.RefrescarDatosSesion(datos);
   }
   ObtenerInformacionSesion(){
     let datosString = localStorage.getItem("datosSesion");
@@ -52,6 +58,7 @@ export class SeguridadService {
 
   EliminarInformacionSesion(){
     localStorage.removeItem("datosSesion");
+    this.RefrescarDatosSesion(new ModeloIdentificar());
   }
 
   SeHaIniciadoSesion(){

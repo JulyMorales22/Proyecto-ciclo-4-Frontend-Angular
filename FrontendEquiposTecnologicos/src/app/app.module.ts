@@ -9,6 +9,7 @@ import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SeguridadRoutingModule } from './modulos/seguridad/seguridad-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { SeguridadRoutingModule } from './modulos/seguridad/seguridad-routing.mo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    ReactiveFormsModule
+
   ],  
   providers: [],
   bootstrap: [AppComponent]
