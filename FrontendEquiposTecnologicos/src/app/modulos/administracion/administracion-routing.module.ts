@@ -35,7 +35,7 @@ const routes: Routes = [
     component: BuscarProductoComponent
   },
   {
-    path:"actualizar-producto",
+    path:"actualizar-producto/:id",
     component: ActualizarProductoComponent
   },
   {
