@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ModeloIdentificar } from 'src/app/Modelos/identificar.modelo';
 import { ModeloProducto } from 'src/app/Modelos/producto.modelo';
 import { ProductoService } from 'src/app/servicios/producto.service';
@@ -20,7 +21,8 @@ export class CrearProductoComponent implements OnInit {
   });
 
   constructor(private fb:FormBuilder,
-    private servicioProducto:ProductoService) { }
+    private servicioProducto:ProductoService,
+    private router:Router) { }
     
   ngOnInit(): void {
   }
@@ -40,7 +42,8 @@ export class CrearProductoComponent implements OnInit {
     p.imagen = imagen;
 
     this.servicioProducto.CrearProducto(p).subscribe((datos:ModeloProducto)=>{
-      alert("El producto fue creado correctamente!!")
+      alert("El producto fue creado correctamente!!");
+      this.router.navigate(["administracion/buscar-producto"]);
     },(error:any)=>{
       alert("Error en el alamcenamiento del producto!!")
     }

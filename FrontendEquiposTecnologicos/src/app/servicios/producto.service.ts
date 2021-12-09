@@ -21,14 +21,24 @@ export class ProductoService {
     return this.http.get<ModeloProducto[]>("http://localhost:3000/productos");
     
   }
-/*
+
   CrearProducto(producto: ModeloProducto):Observable <ModeloProducto>{
     return this.http.post<ModeloProducto>("http://localhost:3000/productos",producto,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
-    });
+    })
   }
+
+  EliminarProducto(id:string):Observable <any>{
+    return this.http.delete<ModeloProducto>("http://localhost:3000/productos",{
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.token}`
+      })
+    })
+  }
+
+/*
 
   EditarProducto(producto: ModeloProducto):Observable <ModeloProducto>{
     return this.http.put<ModeloProducto>("http://localhost:3000/productos",producto,{
@@ -39,13 +49,7 @@ export class ProductoService {
   }
 
 
-  EliminarProducto(id:string):Observable <any>{
-    return this.http.delete<ModeloProducto>("http://localhost:3000/productos",{
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.token}`
-      })
-    });
-  }
+  
 
 */
   

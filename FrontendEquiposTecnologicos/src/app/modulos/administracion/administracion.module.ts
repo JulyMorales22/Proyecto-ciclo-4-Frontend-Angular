@@ -31,6 +31,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdministracionRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ]
 })
 export class AdministracionModule { }

@@ -1,4 +1,4 @@
-<!--<form [formGroup] = "fgValidador" (ngSubmit)="IdentificarUsuario()" > 
+<form [formGroup] = "fgValidador" (ngSubmit)="GuardarProducto()" > 
     <div class="card-panel z-depth-5">
 
        
@@ -16,7 +16,7 @@
         <div class="col s12 m12 l12">
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input formControlName='usuario' type="text" name="usuario" id="usuario">
+                <input formControlName='tipo' type="text" name="usuario" id="usuario">
                 <label for="usuario">Ingrese el tipo de producto </label>
             </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="col s12 m12 l12">
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input formControlName='usuario' type="text" name="usuario" id="usuario">
+                <input formControlName='descripcion' type="text" name="usuario" id="usuario">
                 <label for="usuario">Ingrese la descripcion del producto </label>
             </div>
         </div>
@@ -32,34 +32,25 @@
         <div class="col s12 m12 l12">
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input formControlName='usuario' type="text" name="usuario" id="usuario">
+                <input formControlName='valor' type="text" name="usuario" id="usuario">
                 <label for="usuario">Ingrese el valor  del producto </label>
             </div>
         </div>
         <div class="col s12 m12 l12">
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input formControlName='usuario' type="text" name="usuario" id="usuario">
+                <input formControlName='cantidad' type="text" name="usuario" id="usuario">
                 <label for="usuario">Ingrese la cantidad de este producto </label>
             </div>
         </div>
         <div class="col s12 m12 l12">
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input formControlName='usuario' type="text" name="usuario" id="usuario">
+                <input formControlName='imagen' type="text" name="usuario" id="usuario">
                 <label for="usuario">Ingrese la imagen del producto </label>
             </div>
         </div>
 
-       
-
-        <div class="col m12 l12">
-            <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input formControlName='clave' type="password" name="clave" id="clave">
-                <label for="clave">Contraseña</label>
-            </div>
-        </div>
 
             
 
@@ -81,4 +72,4 @@
 
         <br>
     </div>
-</form>-->
+</form>
