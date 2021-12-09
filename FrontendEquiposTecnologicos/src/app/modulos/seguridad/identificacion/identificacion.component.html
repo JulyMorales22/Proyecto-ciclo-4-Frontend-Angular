@@ -40,6 +40,16 @@
         <br><br>
 
             <!-- Form Button Section  -->
+        <br>
+
+            <form [formGroup]="fgValidador">
+                <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+              </form>
+        <br>
+
 
         <div class="center">
             <input [disabled]= "!fgValidador.valid" type="submit" value="Ingresar" name="login" 

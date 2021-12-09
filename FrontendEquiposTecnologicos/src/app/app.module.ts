@@ -10,6 +10,7 @@ import { ErrorComponent } from './plantilla/error/error.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SeguridadRoutingModule } from './modulos/seguridad/seguridad-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     SeguridadRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule,
+    
 
   ],  
   providers: [],
