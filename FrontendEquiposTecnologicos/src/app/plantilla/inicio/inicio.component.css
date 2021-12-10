@@ -1,0 +1,12 @@
+.center{
+
+    font-size: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    padding-top:5px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    color: #4070af;
+}

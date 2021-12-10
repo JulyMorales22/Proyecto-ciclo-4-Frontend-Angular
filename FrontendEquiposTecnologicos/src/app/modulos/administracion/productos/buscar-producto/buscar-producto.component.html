@@ -21,7 +21,7 @@
             <td>{{p.descripcion}}</td>
             <td>{{p.valor}}</td>
             <td>{{p.cantidad}}</td>
-            <td>{{p.imagen}}</td>
+            <td><img src="{{p.imagen}}" class="imagenproducto"/></td>
             <td><a routerLink="/administracion/actualizar-producto/{{p.id}}" class="btn">Editar</a>
                 <a routerLink="/administracion/eliminar-producto/{{p.id}}" class="btn" >Eliminar</a>
             </td>
