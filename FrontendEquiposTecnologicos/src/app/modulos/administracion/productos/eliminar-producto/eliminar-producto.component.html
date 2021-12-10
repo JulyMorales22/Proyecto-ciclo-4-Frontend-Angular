@@ -1,1 +1,69 @@
-<p>eliminar-producto works!</p>
+<form [formGroup] = "fgValidador" (ngSubmit)="EliminarProducto()" > 
+    <div class="card-panel z-depth-5">
+
+       
+
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <img src="https://i.imgur.com/ypAbAYt.png"
+                 alt="" class="responsive-img circle" style="width:100px;">
+                <p>Eliminar de productos </p>
+            </div>
+        </div>
+
+        <input type="hidden" formControlName = "id"/>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Tipo</h6>
+                <input formControlName='tipo' type="text"  readonly="readonly" name="tipo" id="tipo">
+                <label for="usuario"> </label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Descripcion</h6>
+                <input formControlName='descripcion' type="text" readonly="readonly"name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Valor</h6>
+                <input formControlName='valor' type="text" readonly="readonly" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Cantidad</h6>
+                <input formControlName='cantidad' type="text" readonly="readonly" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Imagen</h6>
+                <input formControlName='imagen' type="text" readonly="readonly" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+
+        <br><br>
+
+            
+
+        <div class="center">
+            <input [disabled]= "!fgValidador.valid" type="submit" value="Eliminar producto" name="login" 
+            class="btn waves-effect waves-light " 
+            style="width:100%; background-color: #ff4081;">
+        </div>
+
+           
+
+        <br>
+    </div>
+</form>

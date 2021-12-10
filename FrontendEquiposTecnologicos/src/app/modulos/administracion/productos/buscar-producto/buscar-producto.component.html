@@ -7,7 +7,7 @@
            <th>Valor </th>
            <th>Cantidad </th>
            <th>Imagen </th>
-           <th>Edicion </th>
+           <th>Acciones</th>
 
 
         </tr>
@@ -22,7 +22,10 @@
             <td>{{p.valor}}</td>
             <td>{{p.cantidad}}</td>
             <td>{{p.imagen}}</td>
-            <td><a routerLink="administracion/editar-producto/{{p.id}" class="btn">Editar</a></td>
+            <td><a routerLink="/administracion/actualizar-producto/{{p.id}}" class="btn">Editar</a>
+                <a routerLink="/administracion/eliminar-producto/{{p.id}}" class="btn" >Eliminar</a>
+            </td>
+            
         </tr>
     </tbody>
 

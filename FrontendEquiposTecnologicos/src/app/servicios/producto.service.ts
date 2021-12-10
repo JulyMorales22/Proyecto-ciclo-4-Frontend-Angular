@@ -15,7 +15,9 @@ export class ProductoService {
       this.token = this.servicioSeguridad.ObtenerToken();
     }
 
-
+  ConsultaProductoPorId(id:string):Observable<ModeloProducto>{
+    return this.http.get<ModeloProducto>(`http://localhost:3000/productos/${id}`);
+  }
 
   ObtenerRegistros():Observable <ModeloProducto[]>{
     return this.http.get<ModeloProducto[]>("http://localhost:3000/productos");
@@ -31,26 +33,24 @@ export class ProductoService {
   }
 
   EliminarProducto(id:string):Observable <any>{
-    return this.http.delete<ModeloProducto>("http://localhost:3000/productos",{
+    return this.http.delete<ModeloProducto>(`http://localhost:3000/productos/${id}`,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
     })
   }
 
-/*
-
-  EditarProducto(producto: ModeloProducto):Observable <ModeloProducto>{
-    return this.http.put<ModeloProducto>("http://localhost:3000/productos",producto,{
+  ActualizarProducto(producto: ModeloProducto):Observable <ModeloProducto>{
+    return this.http.put<ModeloProducto>(`http://localhost:3000/productos/${producto.id}`,producto,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
-    });
+    })
   }
 
 
   
 
-*/
+
   
 }
