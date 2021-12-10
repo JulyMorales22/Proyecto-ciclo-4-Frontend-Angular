@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SeguridadRoutingModule } from './modulos/seguridad/seguridad-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { NuestraEmpresaComponent } from './modulos/otros/nuestra-empresa/nuestra-empresa.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     BarraNavegacionComponent,
     PiePaginaComponent,
     InicioComponent,
-    ErrorComponent
+    ErrorComponent,
+    NuestraEmpresaComponent
   ],
   imports: [
     BrowserModule,

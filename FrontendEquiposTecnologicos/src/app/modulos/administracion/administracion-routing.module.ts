@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
+import { NuestraEmpresaComponent } from '../otros/nuestra-empresa/nuestra-empresa.component';
 import { ActualizarPersonaComponent } from './personas/actualizar-persona/actualizar-persona.component';
 import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona.component';
 import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.component';
@@ -12,35 +14,47 @@ import { EliminarProductoComponent } from './productos/eliminar-producto/elimina
 const routes: Routes = [
   {
     path:"crear-persona", 
-    component: CrearPersonaComponent  
+    component: CrearPersonaComponent
   },
   {
     path:"buscar-persona",
-    component: BuscarPersonaComponent
+    component: BuscarPersonaComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"actualizar-persona",
-    component: ActualizarPersonaComponent
+    component: ActualizarPersonaComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"eliminar-persona",
-    component: EliminarPersonaComponent
+    component: EliminarPersonaComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"crear-producto",
-    component: CrearProductoComponent
+    component: CrearProductoComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"buscar-producto",
-    component: BuscarProductoComponent
+    component: BuscarProductoComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"actualizar-producto/:id",
-    component: ActualizarProductoComponent
+    component: ActualizarProductoComponent,
+    canActivate : [ValidadorSesionGuard]
   },
   {
     path:"eliminar-producto",
-    component: EliminarProductoComponent
+    component: EliminarProductoComponent,
+    canActivate : [ValidadorSesionGuard]
+  },
+  {
+    path:"nuestra-empresa",
+    component: NuestraEmpresaComponent,
+    canActivate : [ValidadorSesionGuard]
   }
 ];
 
