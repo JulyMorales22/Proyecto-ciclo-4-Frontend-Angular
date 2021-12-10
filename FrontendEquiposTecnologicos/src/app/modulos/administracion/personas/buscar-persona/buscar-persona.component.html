@@ -1,1 +1,40 @@
-<p>buscar-persona works!</p>
+<table class="table responsive">
+
+    <thead>
+        <tr>
+           <th>Nombres </th> 
+           <th>Apellidos </th>
+           <th>Telefono </th>
+           <th>Correo Electronico </th>
+           <th>Direccion </th>
+           <th>Usuario </th>
+           <th>Acciones</th>
+
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor = "let p of ListaUsuarios">
+            <td>{{p.nombre}}</td>
+            <td>{{p.apellidos}}</td>
+            <td>{{p.telefono}}</td>
+            <td>{{p.correoElectronico}}</td>
+            <td>{{p.direccion}}</td>
+            <td>{{p.user}}</td>
+            <td><a routerLink="/administracion/actualizar-persona/{{p.id}}" class="btn">Editar</a>
+                <a routerLink="/administracion/eliminar-persona/{{p.id}}" class="btn" >Eliminar</a>
+            </td>
+            
+        </tr>
+    </tbody>
+
+
+
+
+</table>
+
+<br>
+<a routerLink = "/administracion/crear-persona" class="btn">crear Usuario</a>
