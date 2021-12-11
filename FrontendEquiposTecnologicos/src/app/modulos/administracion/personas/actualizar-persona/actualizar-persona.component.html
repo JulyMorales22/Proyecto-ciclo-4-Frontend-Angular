@@ -17,67 +17,49 @@
 
         <div class="col s12 m12 l12">
             <div class="input-field">
-                <i class="material-icons prefix">person</i>
+                <h6>Nombre</h6>
                 <input formControlName='nombre' type="text" name="nombre" id="tipo">
-                <label for="usuario">Ingrese el tipo de producto </label>
+                <label for="usuario"></label>
             </div>
         </div>
 
         <div class="col s12 m12 l12">
             <div class="input-field">
-                <i class="material-icons prefix">person</i>
+                <h6>Apellidos</h6>
                 <input formControlName='apellidos' type="text" name="apellidos" id="usuario">
-                <label for="usuario">Ingrese la descripcion del producto </label>
+                <label for="usuario"> </label>
             </div>
         </div>
 
         <div class="col s12 m12 l12">
             <div class="input-field">
-                <i class="material-icons prefix">person</i>
+                <h6>Telefono</h6>
                 <input formControlName='telefono' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese el valor  del producto </label>
+                <label for="usuario"> </label>
             </div>
         </div>
         <div class="col s12 m12 l12">
             <div class="input-field">
-                <i class="material-icons prefix">person</i>
+                <h6>Correo Electronico</h6>
                 <input formControlName='correoElectronico' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese la cantidad de este producto </label>
+                <label for="usuario"></label>
             </div>
         </div>
 
         <div class="col s12 m12 l12">
             <div class="input-field">
-                <i class="material-icons prefix">person</i>
+                <h6>Direccion</h6>
                 <input formControlName='direccion' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese la imagen del producto </label>
+                <label for="usuario"></label>
             </div>
         </div>
-
-      <!--  
-        <div class="col s12 m12 l12">
-            <div class="input-field">
-                <i class="material-icons prefix">person</i>
-                <input formControlName='clave' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese la imagen del producto </label>
-            </div>
-        </div>
-
-        <div class="col s12 m12 l12">
-            <div class="input-field">
-                <i class="material-icons prefix">person</i>
-                <input formControlName='id' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese la imagen del producto </label>
-            </div>
-        </div>
--->
 
         <br><br>
 
             
 
         <div class="center">
-            <input [disabled]= "!fgValidador.valid" type="submit" value="Actualizar producto" name="login" 
+            <input [disabled]= "!fgValidador.valid" type="submit" value="Guardar Cambios" name="login" 
             class="btn waves-effect waves-light " 
             style="width:100%; background-color: #ff4081;">
         </div>

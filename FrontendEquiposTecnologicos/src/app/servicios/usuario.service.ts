@@ -22,8 +22,8 @@ export class UsuarioService {
     return  this.http.post<ModeloUsuario>("http://localhost:3000/usuario2s",usuario);
   }
 
-  EliminarUsuario(id:string):Observable <any>{
-    return this.http.delete<ModeloUsuario>(`http://localhost:3000/usuario2s/${id}`)
+  EliminarPersona(id:string):Observable <any>{
+    return this.http.delete<ModeloUsuario>(`http://localhost:3000/usuario2s/${id}`);
   }
 
   ActualizarUsuario(usuario: ModeloUsuario):Observable<ModeloUsuario>{

@@ -1,1 +1,72 @@
-<p>eliminar-persona works!</p>
+<form [formGroup] = "fgValidador" (ngSubmit)="EliminarPersona()" > 
+    <div class="card-panel z-depth-5">
+
+       
+
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <img src="https://i.imgur.com/ypAbAYt.png"
+                 alt="" class="responsive-img circle" style="width:100px;">
+                <p>Eliminacion de registros de personas </p>
+            </div>
+        </div>
+
+        <input type="hidden" formControlName = "id"/>
+        <input type="hidden" formControlName = "clave"/>
+
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Nombre</h6>
+                <input formControlName='nombre' type="text" name="nombre" id="tipo">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Apellidos</h6>
+                <input formControlName='apellidos' type="text" name="apellidos" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Telefono</h6>
+                <input formControlName='telefono' type="text" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Correo Electronico</h6>
+                <input formControlName='correoElectronico' type="text" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <h6>Direccion</h6>
+                <input formControlName='direccion' type="text" name="usuario" id="usuario">
+                <label for="usuario"></label>
+            </div>
+        </div>
+
+
+        <br><br>
+
+            
+
+        <div class="center">
+            <input [disabled]= "!fgValidador.valid" type="submit" value="Eliminar Persona" name="login" 
+            class="btn waves-effect waves-light " 
+            style="width:100%; background-color: #ff4081;">
+        </div>
+
+           
+
+        <br>
+    </div>
+</form>
