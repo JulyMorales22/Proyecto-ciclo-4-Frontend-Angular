@@ -27,7 +27,7 @@ export class UsuarioService {
   }
 
   ActualizarUsuario(usuario: ModeloUsuario):Observable<ModeloUsuario>{
-    return this.http.put<ModeloUsuario>(`http://localhost:3000/usuarios2s/${usuario.id}`,usuario);
+    return this.http.put<ModeloUsuario>(`http://localhost:3000/usuario2s/${usuario.id}`,usuario);
   }
 
 }
