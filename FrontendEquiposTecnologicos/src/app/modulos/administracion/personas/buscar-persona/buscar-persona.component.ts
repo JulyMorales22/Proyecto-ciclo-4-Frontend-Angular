@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloPersona } from 'src/app/Modelos/persona.modelo';
 import { ModeloUsuario } from 'src/app/Modelos/usuario.modelo';
 import { UsuarioService } from 'src/app/servicios/usuario.service';
 
@@ -9,8 +10,11 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
 })
 export class BuscarPersonaComponent implements OnInit {
   ListaUsuarios:ModeloUsuario[]=[];
+  
 
-  constructor(private servicioUsuario: UsuarioService) { }
+  constructor(private servicioUsuario: UsuarioService) {
+    
+   }
 
   ngOnInit(): void {
     this.ObtenerListadoUsuarios();

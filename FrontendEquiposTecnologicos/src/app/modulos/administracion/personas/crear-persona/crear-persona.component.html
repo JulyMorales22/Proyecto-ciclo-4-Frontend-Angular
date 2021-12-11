@@ -1,36 +1,74 @@
-<h1> Pagina para crear personas</h1>
-<!---
-/*
-<div>
-    <form [formGroup] ="formCrear" (submit)="Crear()">
-        <div>
-            <label for="nombre"> Nombre</label>
-            <input type=text id="nombre" formControlName="nombre">
+<form [formGroup] = "fgValidador" (ngSubmit)="GuardarPersona()" > 
+    <div class="card-panel z-depth-5">
+
+       
+
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <p>Creacion de productos </p>
+            </div>
         </div>
-        <div>
-            <label for="apellidos">Apellidos</label>
-            <input type=text id="apellidos" formControlName="apellidos">
-        </div>
-        <div>
-            <label for="telefono">Telefono</label>
-            <input type=text id="telefono" formControlName="telefono">
-        </div>
-        <div>
-            <label for="correoElectronico"> Correo Electronico</label>
-            <input type=text id="correoElectronico" formControlName="correoElectronico">
-        </div>
-        <div>
-            <label for="direccion">Direccion</label>
-            <input type=text id="direccion" formControlName="direccion">
-        </div>
+
         
 
-        <div>
-           <button> Crear</button> 
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='nombre' type="text" name="usuario" id="usuario">
+                <label for="usuario">Ingrese su nombre </label>
+            </div>
         </div>
 
-    </form>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='apellidos' type="text" name="usuario" id="usuario">
+                <label for="usuario">Ingrese su apellido </label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='telefono' type="text" name="usuario" id="usuario">
+                <label for="usuario">Ingrese su telefono </label>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='correoElectronico' type="text" name="usuario" id="usuario">
+                <label for="usuario">Ingrese su correo electronico</label>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='direccion' type="text" name="usuario" id="usuario">
+                <label for="usuario">Ingrese su direccion </label>
+            </div>
+        </div>
 
 
+            
 
-</div>-->
+        <div class="left">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Remember Me</label>
+        </div>
+        <br><br>
+
+            
+
+        <div class="center">
+            <input [disabled]= "!fgValidador.valid" type="submit" value="Guardar Persona" name="login" 
+            class="btn waves-effect waves-light " 
+            style="width:100%; background-color: #ff4081;">
+        </div>
+
+           
+
+        <br>
+    </div>
+</form>
+
