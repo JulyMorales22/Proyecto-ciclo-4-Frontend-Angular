@@ -26,6 +26,8 @@ export class ActualizarPersonaComponent implements OnInit {
 
 
   id:string="";
+
+  clave:string="";
   
 
   constructor(private fb:FormBuilder,
@@ -37,7 +39,6 @@ export class ActualizarPersonaComponent implements OnInit {
 
   ngOnInit(): void {
     this.id= this.route.snapshot.params["id"];
-    alert(this.id);
     this.BuscarUsuario();
   }
 
@@ -62,8 +63,7 @@ export class ActualizarPersonaComponent implements OnInit {
     p.id = id;
 
     this.servicioUsuario.ActualizarUsuario(p).subscribe((datos:ModeloUsuario)=>{
-      alert("El usuario se Actualizo correctamente");
-      this.router.navigate(["administracion/buscar-usuario"]);
+      this.router.navigate(["administracion/buscar-persona"]);
     },(error:any)=>{
       alert("Error en la Actualizacion");
     }
@@ -79,7 +79,10 @@ export class ActualizarPersonaComponent implements OnInit {
       this.fgValidador.controls["correoElectronico"].setValue(datos.correoElectronico);
       this.fgValidador.controls["direccion"].setValue(datos.direccion);
       this.fgValidador.controls["clave"].setValue(datos.clave);
-      this.fgValidador.controls["id"].setValue(datos.id);
+      this.fgValidador.controls["id"].setValue(this.id);
+
+
+
     },(error:any)=>{
       alert ("El usuario no pudo ser actualizado");
     }
