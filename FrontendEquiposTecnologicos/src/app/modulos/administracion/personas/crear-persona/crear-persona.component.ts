@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ModeloPersona } from 'src/app/Modelos/persona.modelo';
 import { ModeloUsuario } from 'src/app/Modelos/usuario.modelo';
 import { UsuarioService } from 'src/app/servicios/usuario.service';
 
@@ -17,6 +18,7 @@ export class CrearPersonaComponent implements OnInit {
     'correoElectronico': ["",[Validators.required]],
     'direccion': ["",[Validators.required]]
   });
+  //personaId:"";
 
   constructor(private fb:FormBuilder,
     private servicioUsuario:UsuarioService,
@@ -33,12 +35,15 @@ export class CrearPersonaComponent implements OnInit {
     let direccion = this.fgValidador.controls['direccion'].value;
   
     let p = new ModeloUsuario();
-    p.nombre=nombre;
-    p.apellidos =apellidos;
-    p.telefono = telefono;
-    p.correoElectronico = correoElectronico;
-    p.direccion = direccion;
-    p.user=correoElectronico;
+    {
+      p.nombre=nombre;
+      p.apellidos =apellidos;
+      p.telefono=telefono;
+      p.correoElectronico=correoElectronico;
+      p.direccion=direccion;
+  
+    }
+   
 
     this.servicioUsuario.CrearUsuario(p).subscribe((datos:ModeloUsuario)=>{
       alert("la persona fue creada correctamente!!");

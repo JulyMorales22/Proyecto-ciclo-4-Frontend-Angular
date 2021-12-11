@@ -11,18 +11,18 @@ export class UsuarioService {
   constructor(private http:HttpClient) { }
 
   ConsultarRegistros():Observable<ModeloUsuario[]>{
-    return this.http.get<ModeloUsuario[]>("http://localhost:3000/usuarios");
+    return this.http.get<ModeloUsuario[]>("http://localhost:3000/usuario2s");
   }
 
   CrearUsuario(usuario: ModeloUsuario):Observable<ModeloUsuario>{
-    return  this.http.post<ModeloUsuario>("http://localhost:3000/usuarios",usuario);
+    return  this.http.post<ModeloUsuario>("http://localhost:3000/usuario2s",usuario);
   }
 
   EliminarUsuario(id:string):Observable <any>{
-    return this.http.delete<ModeloUsuario>(`http://localhost:3000/usuarios/${id}`)
+    return this.http.delete<ModeloUsuario>(`http://localhost:3000/usuario2s/${id}`)
   }
-
+/*
   ActualizarUsuario(usuario: ModeloUsuario):Observable<ModeloUsuario>{
     return this.http.put<ModeloUsuario>(`http://localhost:3000/usuarios/${usuario.id}`,usuario);
-  }
+  }*/
 }

@@ -13,9 +13,9 @@ export class SeguridadService {
     
   }
 
-  Identificar(usuario: string, clave:string):Observable<ModeloIdentificar>{
-    return this.http.post("http://localhost:3000/identificarUsuario",{
-      usuario:usuario,
+  Identificar(correoElectronico: string, clave:string):Observable<ModeloIdentificar>{
+    return this.http.post("http://localhost:3000/identificarUsuario2",{
+      usuario:correoElectronico,
       clave:clave,
 
     },{
