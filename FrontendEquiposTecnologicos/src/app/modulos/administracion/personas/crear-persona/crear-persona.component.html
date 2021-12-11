@@ -5,7 +5,7 @@
 
         <div class="row margin">
             <div class="col s12 m12 l12 center">
-                <p>Creacion de productos </p>
+                <p>Creacion de personas </p>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
             <div class="input-field">
                 <i class="material-icons prefix">person</i>
                 <input formControlName='apellidos' type="text" name="usuario" id="usuario">
-                <label for="usuario">Ingrese su apellido </label>
+                <label for="usuario">Ingrese sus apellidos </label>
             </div>
         </div>
 
@@ -58,6 +58,16 @@
         </div>
         <br><br>
 
+        <br>
+
+            <form [formGroup]="fgValidador">
+                <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+              </form>
+        <br>
+
             
 
         <div class="center">
@@ -65,7 +75,7 @@
             class="btn waves-effect waves-light " 
             style="width:100%; background-color: #ff4081;">
         </div>
-        <a routerLink = "/administracion/crear-persona" class="btn">crear Usuario</a>
+        <!--<a routerLink = "/administracion/crear-persona" class="btn">crear Usuario</a>-->
            
 
         <br>

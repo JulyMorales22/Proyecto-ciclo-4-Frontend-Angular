@@ -12,6 +12,7 @@ import { BuscarProductoComponent } from './productos/buscar-producto/buscar-prod
 import { ActualizarProductoComponent } from './productos/actualizar-producto/actualizar-producto.component';
 import { EliminarProductoComponent } from './productos/eliminar-producto/eliminar-producto.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AdministracionRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule
     
   ]
 })

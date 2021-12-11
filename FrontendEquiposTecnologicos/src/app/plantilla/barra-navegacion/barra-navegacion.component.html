@@ -5,12 +5,12 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li *ngIf = "sesionIniciada"><a routerLink="/inicio">Inicio</a></li>
-        <li ><a routerLink="administracion/crear-persona">Registrarse</a></li>
+        <li ><a routerLink="administracion/buscar-persona">Registrarse</a></li>
         <li *ngIf = "!sesionIniciada"><a routerLink="seguridad/identificacion">Iniciar Sesion</a></li>
         <li *ngIf = "sesionIniciada"><a routerLink="seguridad/cerrar-sesion">Cerrar Sesion</a></li>
         <li *ngIf = "sesionIniciada"><a routerLink="administracion/buscar-persona">Usuarios</a></li>
         <li *ngIf = "sesionIniciada"><a routerLink="administracion/buscar-producto">Conoce nuestros productos</a></li>
-        <li *ngIf = "sesionIniciada"><a routerLink="pedidos/realizar-pedidos">Realiza tu pedido</a></li>
+       <!-- <li *ngIf = "sesionIniciada"><a routerLink="pedidos/realizar-pedidos">Realiza tu pedido</a></li>-->
         <li *ngIf = "sesionIniciada"><a routerLink="administracion/nuestra-empresa">Nuestra empresa</a></li>
         
       </ul>
@@ -24,6 +24,6 @@
         <li *ngIf = "sesionIniciada"><a routerLink="seguridad/cerrar-sesion">Cerrar Sesion</a></li>
         <li *ngIf = "sesionIniciada"><a routerLink="seguridad/cambio-clave">Cambiar clave</a></li>
         <li *ngIf = "sesionIniciada"><a routerLink="administracion/buscar-producto">Conoce nuestros productos</a></li>
-        <li *ngIf = "sesionIniciada"><a routerLink="pedidos/realizar-pedidos">Realiza tu pedido</a></li>
+       <!-- <li *ngIf = "sesionIniciada"><a routerLink="pedidos/realizar-pedidos">Realiza tu pedido</a></li>-->
         <li *ngIf = "sesionIniciada"><a routerLink="administracion/buscar-producto">Productos</a></li>
   </ul>

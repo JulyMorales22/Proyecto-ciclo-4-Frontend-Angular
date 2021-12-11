@@ -16,13 +16,16 @@ export class CrearPersonaComponent implements OnInit {
     'apellidos': ["",[Validators.required]],
     'telefono': ["",[Validators.required]],
     'correoElectronico': ["",[Validators.required]],
-    'direccion': ["",[Validators.required]]
+    'direccion': ["",[Validators.required]],
+    'recaptcha':['', [Validators.required]]
   });
   //personaId:"";
-
+  siteKey:string ="";
   constructor(private fb:FormBuilder,
     private servicioUsuario:UsuarioService,
-    private router:Router) { }
+    private router:Router) { 
+      this.siteKey="6LfvSY8dAAAAAMDY8yLoIk45QvIN2nM4740zgjF2";
+    }
   ngOnInit(): void {
     
 
