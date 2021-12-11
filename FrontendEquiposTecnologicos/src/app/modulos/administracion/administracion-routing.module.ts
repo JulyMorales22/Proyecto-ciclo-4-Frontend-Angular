@@ -22,7 +22,7 @@ const routes: Routes = [
     canActivate : [ValidadorSesionGuard]
   },
   {
-    path:"actualizar-persona",
+    path:"actualizar-persona/:id",
     component: ActualizarPersonaComponent,
     canActivate : [ValidadorSesionGuard]
   },

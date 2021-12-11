@@ -28,6 +28,8 @@ const routes: Routes = [
     loadChildren:()=>import("./modulos/pedidos/pedidos.module").then(x =>x.PedidosModule)
 
   },
+
+  
   {
     path:"**",
     component:ErrorComponent
